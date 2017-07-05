@@ -660,3 +660,13 @@ Add the -clean-bm flag to recon-all to overwrite brainmask.mgz.\n
 #-------------------------------------
 #@# EM Registration Wed Jul  5 14:41:29 EDT 2017
 \n mri_em_register -rusage /Users/freesurfer_user/Documents/GitHub/FreeSurfer-Summer-Workshop/fs/sub.01.bl.02/touch/rusage.mri_em_register.dat -uns 3 -mask brainmask.mgz nu.mgz /Applications/freesurfer/average/RB_all_2016-05-10.vc700.gca transforms/talairach.lta \n
+\n\n#---------------------------------
+# New invocation of recon-all Wed Jul  5 14:56:04 EDT 2017 
+#--------------------------------------
+#@# CA Normalize Wed Jul  5 14:56:04 EDT 2017
+\n mri_ca_normalize -c ctrl_pts.mgz -mask brainmask.mgz nu.mgz /Applications/freesurfer/average/RB_all_2016-05-10.vc700.gca transforms/talairach.lta norm.mgz \n
+\n\n#---------------------------------
+# New invocation of recon-all Wed Jul  5 14:58:11 EDT 2017 
+#--------------------------------------
+#@# CA Reg Wed Jul  5 14:58:11 EDT 2017
+\n mri_ca_register -rusage /Users/freesurfer_user/Documents/GitHub/FreeSurfer-Summer-Workshop/fs/sub.01.bl.02/touch/rusage.mri_ca_register.dat -nobigventricles -T transforms/talairach.lta -align-after -mask brainmask.mgz norm.mgz /Applications/freesurfer/average/RB_all_2016-05-10.vc700.gca transforms/talairach.m3z \n
